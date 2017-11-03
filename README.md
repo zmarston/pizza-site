@@ -4,18 +4,18 @@
 
 ## Specifications
 
-Display Pizza
-* input
-* output
-
 When pizza size is clicked, size is selected and toppings appear
-* input
-* output
+* input: click large
+* output: Size = large
 
-When pizza toppings are clicked, toppings are selected
-* input
-* output
+When pizza a topping is clicked, topping is selected
+* input: click pepperoni
+* output: toppings = pepperoni
 
-When checkout is clicked, price is displayed
-* input
-* output
+When multiple toppings are clicked, toppings are added to array
+* input: click pepperoni and onions
+* output: toppings = pepperoni, onions
+
+When form is submitted, Pizza Summary appears
+* input: click button
+* output: pizza summary is displayed
