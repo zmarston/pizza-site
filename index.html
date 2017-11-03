@@ -10,14 +10,33 @@
   </head>
   <body>
     <div class="container">
-      <form id="pizza">
-        <select class="form-control" id="size">
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-        </select>
-        <button type="submit" id="submit-button">Next</button>
-      </form>
+      <div class="create-pizza">
+        <form id="pizza">
+          <label>Select a size...</label>
+          <select class="form-control" id="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <h2>Choose your meats</h2>
+          <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+          <input type="checkbox" name="topping" value="sausage"> Sausage
+          <input type="checkbox" name="topping" value="salami"> salami
+          <input type="checkbox" name="topping" value="ham"> ham
+          <h2>Choose your vegetables</h2>
+          <input type="checkbox" name="topping" value="tomatoes"> Tomatoes
+          <input type="checkbox" name="topping" value="pineapple"> pineapple
+          <input type="checkbox" name="topping" value="bellpepper"> bellpepper
+          <input type="checkbox" name="topping" value="blackolives"> blackolives
+          <br>
+          <input type="checkbox" name="topping" value="mushroom"> mushroom
+          <input type="checkbox" name="topping" value="onions"> onions
+          <input type="checkbox" name="topping" value="spinach"> spinach
+          <button type="submit" id="submit-button">Create Pizza</button>
+        </form>
+      </div>
+      <ul id="order">
+      </ul>
     </div>
   </body>
 </html>

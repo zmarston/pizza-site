@@ -1,37 +1,38 @@
 // back end
-function Pizza(toppings, size, price){
-  this.toppings = toppings;
+function Pizza(toppingsArray, size, price){
+  this.toppings = toppingsArray;
   this.size = size;
   this.price = 0;
+  this.addPrice();
 }
 
-function addSizePrice(newPizza) {
-  if (newPizza.size === "small") {
-    alert("small");
-    price = 10;
-    return this.price
-  } else if (size === "medium") {
-    alert("medium");
-    price = 15;
-    alert(pizza.price);
-  } else if (size === "large") {
-    alert("large");
-    price = 20;
-    alert(pizza.price);
+// totals price
+Pizza.prototype.addPrice = function () {
+  if (this.size === "small") {
+    this.price += 10;
+  } else if (this.size === "medium") {
+    this.price += 15;
+  } else if (this.size === "large") {
+    this.price += 20;
   }
 
-}
+  var numberOfToppings = (this.toppings.length) * 2;
+  this.price += numberOfToppings;
 
+  return this.price;
+}
 
 // front end
 $(document).ready(function(){
   $("form#pizza").submit(function(event){
-    debugger
-    event.preventDefault;
+    event.preventDefault();
     var size = $("#size").val();
-
-    var newPizza = new Pizza(size);
-
-    addSizePrice(newPizza);
+    var toppings = [];
+    $("input:checkbox[name=topping]:checked").each(function(){
+      toppings.push($(this).val());
+    });
+    var newPizza = new Pizza(toppings, size);
+    $("ul#order").text("");
+    $("ul#order").append("<li> Size: " + newPizza.size + "</li>" + "<li> Toppings: " + newPizza.toppings + "</li>" + "<li> Total: $" + newPizza.price + "</li>");
   });
 });
