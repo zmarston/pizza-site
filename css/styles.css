@@ -1,3 +1,41 @@
-.create-pizza {
+body {
+  background-color: #d4a59a;
+  font-family: 'Merriweather', serif;
+}
+.container {
   text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+h1 {
+  font-size: 150px;
+  color: #5c2018;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin-bottom: 50px;
+  letter-spacing: 20px;
+  border-color: black;
+}
+  h2 {
+  color: #bc4639;
+  letter-spacing: 5px;
+
+}
+.style1 {
+  color: #990a0a;
+}
+select:hover {
+  cursor: pointer;
+}
+input:hover {
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+}
+li {
+  font-size: 30px;
 }

@@ -5,38 +5,46 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <meta charset="utf-8">
     <title>Pizza Site</title>
   </head>
   <body>
     <div class="container">
-      <div class="create-pizza">
-        <form id="pizza">
-          <label>Select a size...</label>
-          <select class="form-control" id="size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <h2>Choose your meats</h2>
-          <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
-          <input type="checkbox" name="topping" value="sausage"> Sausage
-          <input type="checkbox" name="topping" value="salami"> salami
-          <input type="checkbox" name="topping" value="ham"> ham
-          <h2>Choose your vegetables</h2>
-          <input type="checkbox" name="topping" value="tomatoes"> Tomatoes
-          <input type="checkbox" name="topping" value="pineapple"> pineapple
-          <input type="checkbox" name="topping" value="bellpepper"> bellpepper
-          <input type="checkbox" name="topping" value="blackolives"> blackolives
-          <br>
-          <input type="checkbox" name="topping" value="mushroom"> mushroom
-          <input type="checkbox" name="topping" value="onions"> onions
-          <input type="checkbox" name="topping" value="spinach"> spinach
-          <button type="submit" id="submit-button">Create Pizza</button>
-        </form>
+      <h1>Pizza <span class="style1">Maker</span></h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="pizza">
+            <h2>Select a size...</h2>
+            <select class="form-control" id="size">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+            <h2>Choose your meats:</h2>
+            <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+            <input type="checkbox" name="topping" value="sausage"> Sausage
+            <input type="checkbox" name="topping" value="salami"> Salami
+            <input type="checkbox" name="topping" value="ham"> Ham
+            <h2>Choose your vegetables:</h2>
+            <input type="checkbox" name="topping" value="tomatoes"> Tomatoes
+            <input type="checkbox" name="topping" value="pineapple"> Pineapple
+            <input type="checkbox" name="topping" value="bellpepper"> Bellpepper
+            <input type="checkbox" name="topping" value="blackolives"> Black Olives
+            <br>
+            <input type="checkbox" name="topping" value="mushroom"> Mushroom
+            <input type="checkbox" name="topping" value="onions"> Onions
+            <input type="checkbox" name="topping" value="spinach"> Spinach
+            <br>
+            <button type="submit" id="submit-button">Create Pizza</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h2>Pizza Summary:</h2>
+          <ul id="order">
+          </ul>
+        </div>
       </div>
-      <ul id="order">
-      </ul>
     </div>
   </body>
 </html>
